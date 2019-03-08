@@ -1,5 +1,7 @@
 package com.melon.userservice.model;
 
+import lombok.*;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,6 +12,9 @@ import java.util.Date;
  */
 
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements Serializable {
 
     private static final long serialVersionUID = -333908550708380535L;
@@ -17,47 +22,6 @@ public class User implements Serializable {
     private String name;
     private String password;
     private Date createtime;
-
-    public User() {
-    }
-
-    public User(Long id, String name, String password, Date createtime) {
-        this.id = id;
-        this.name = name;
-        this.password = password;
-        this.createtime = createtime;
-    }
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Date getCreatetime() {
-        return createtime;
-    }
-
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
-    }
 }
+
+
